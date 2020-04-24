@@ -1,8 +1,12 @@
 # local dev stuff
 .envrc
+.DS_Store
 
 # editors
 .idea
 *.swp
 *.swo
 *~
+
+# generated output
+clients

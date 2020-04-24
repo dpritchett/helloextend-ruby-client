@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+GEM_CONFIG="gem_config.json"
+OUTPUT_LANGUAGE="ruby"
 SCHEMA=/reference/openapi_spec.json
 
 printf "\n******************************************************\n"
@@ -15,4 +17,5 @@ docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
     --skip-validate-spec \
     -i /local/${SCHEMA} \
     -g "${OUTPUT_LANGUAGE}" \
+    -c "/local/${GEM_CONFIG}" \
     -o "/local/clients/${OUTPUT_LANGUAGE}"
