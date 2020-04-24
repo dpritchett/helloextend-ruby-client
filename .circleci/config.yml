@@ -1,0 +1,20 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01 # recommended by circle docs april2020
+    steps:
+      - checkout
+      - run:
+          name: build client via make
+          command: |
+            make build-ruby-client
+            sudo chown -R circleci:circleci /home/circleci/project/clients/
+      - run:
+          name: install gem via rake
+          command: |
+            cd ./clients/ruby
+            rake build install
