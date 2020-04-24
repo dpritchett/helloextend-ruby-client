@@ -3,7 +3,7 @@ ell: clean build-ruby-client install-gem ruby-product-demo
 build-ruby-client:
 	env OUTPUT_LANGUAGE=ruby ./shell/generate-bindings.sh
 
-release-gem: clean build-ruby-client
+release-gem: clean build-ruby-client install-gem
 	cd ./clients/ruby && rake clean clobber install release
 
 install-gem:
