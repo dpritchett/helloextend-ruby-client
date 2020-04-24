@@ -5,7 +5,7 @@
   "gemAuthorEmail": "daniel@dpritchett.net",
   "gemHomepage": "https://github.com/dpritchett/helloextend-ruby-client",
   "gemDescription": "REST API Client for the helloextend.com ecommerce warranty API",
-  "gemRequiredRubyVersion": "~> 2.4.0",
+  "gemRequiredRubyVersion": ">= 2.4.0",
   "gemSummary": "REST API Client for the helloextend.com ecommerce warranty API",
   "gemVersion": "1.0.3"
 }
