@@ -8,11 +8,10 @@ release-gem: clean build-ruby-client
 
 install-gem:
 	cd ./clients/ruby && \
-	gem build openapi_client.gemspec && \
-	gem install ./openapi_client-1.0.0.gem
+	rake build install
 
 clean:
-	gem uninstall openapi_client
+	gem uninstall helloextend_api_client
 	rm -rf ./clients/ruby
 
 ruby-product-demo:
